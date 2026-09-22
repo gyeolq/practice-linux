@@ -14,24 +14,44 @@
 whoami # 현재 사용자 표시
 pwd # 현재 디렉토리 표시
 ls # 파일 및 디렉토리 표시
-    -a # 숨김 파일까지 표시
-    -l # 상세 형태로 표시
 cd # 디렉토리 이동
 mkdir # 디렉토리 생성
 touch # 파일 생성
 cp # 파일 및 디렉토리 복사
 mv # 파일 및 디렉토리 이동
 rm # 파일 및 디렉토리 삭제
-    -r # 하위 경로 포함하여 삭제
 cat # 파일 전체 내용 표시
 less # 파일 내용을 페이지 단위로 표시
-head # 파일 내용을 앞부분부터 표시(기본 10줄)
-    -n 숫자 # 앞부분 n줄 표시
-tail # 파일 내용을 뒷부분부터 표시(기본 10줄)
-    -n 숫자 # 뒷부분 n줄 표시
-    -f # 추가되는 내용 실시간 표시
-grep "문자열" # 원하는 문자열 탐색
+head # 파일 내용을 앞부분부터 표시
+tail # 파일 내용을 뒷부분부터 표시
+grep # 원하는 문자열 탐색
 find # 파일 및 디렉토리 검색
-    -name # 이름으로 검색
-    -type # 타입(파일 또는 디렉토리)을 지정하여 검색
+wc # 파일 내의 줄 수, 단어 수, 바이트, 파일명 표시
+sort # 파일 내용 정렬하여 표시
+uniq # 연속된 줄의 중복 제거하여 표시
+chmod # 권한 변경
+chmod u+x script.sh
+```
+
+## 명령어 사용 예시
+```bash
+ls -al
+cp file1.log file2.log
+cp file.log /
+rm -rf file.log
+cat > file.log
+head -n 3 file.log
+tail -f file.log
+grep "ERROR" file.log | tail -n 1
+grep "ERROR" file.log | wc -l
+find . -name "file.log"
+echo "str" > file.log
+wc -l file.log
+sort -u file.log
+uniq -c file.log
+ls *.log
+ls file?.log
+ls file[12].log
+find . -name ".log" -type f | xargs ls
+chmod 755 file.log
 ```
