@@ -31,6 +31,8 @@ sort # 파일 내용 정렬하여 표시
 uniq # 연속된 줄의 중복 제거하여 표시
 chmod # 권한 변경
 chmod u+x script.sh
+chown # 소유자 변경
+chown testuser file.log
 ```
 
 ## 명령어 사용 예시
